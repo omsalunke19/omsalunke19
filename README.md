@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Om Salunke</h1>
-<h3 align="center">AI Enthusiast | Software Engineer | Data Science Practitioner</h3>
+<h3 align="center">AI Enthusiast | Data & MLOps Engineer | Software Developer</h3>
 
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=2196F3&center=true&vCenter=true&width=435&lines=Software+Engineer;AI+%26+ML+Enthusiast;Full-Stack+Developer" alt="Typing SVG" />
@@ -16,11 +16,11 @@
 ### 👨‍💻 About Me
 
 - 🌐 Check out my latest projects and work on my **[Portfolio Website](https://omsalunke.framer.website/)**.
-- 🔭 I’m currently pursuing my **Master's in Artificial Intelligence** at the **University at Buffalo**.
-- 💼 I previously interned as a **Software Engineer at Tech Mahindra**, where I built and deployed blockchain networks and smart contracts.
+- 🔭 Graduated **Master's in Artificial Intelligence** at the **University at Buffalo**.
+- 💼 I previously interned as a **Software Engineer at Tech Mahindra**, where I built pipelines and implemented data governance .
 - 🌱 I’m currently building end-to-end projects focusing on **Deep Learning, NLP, and Full-Stack Architecture**.
 - 💬 Ask me about **Python, C++, Django, React, or Machine Learning pipelines**.
-- 📫 Reach out to me at: **omatulsa@buffalo.edu**.
+- 📫 Reach out to me at: **omsalunke19@gmail.com**.
 - ⚡ **Fun fact:** When I'm not writing code or training models, you can find me at the movies, watching an F1 race or UFC card, or grinding ranked matches in VALORANT and running heists in GTA Online.
 
 ### 🛠️ Tech Stack
