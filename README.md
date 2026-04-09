@@ -49,7 +49,7 @@
 ### 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=omsalunke19&show_icons=true&theme=radical" alt="Om's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=omsalunke19&show_icons=true&theme=radical&v=1" alt="Om's GitHub Stats" />
   <br/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=omsalunke19&theme=radical" alt="Om's GitHub Streak" />
 </div>
