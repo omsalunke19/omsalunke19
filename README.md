@@ -20,7 +20,7 @@
 - 💼 I previously interned as a **Software Engineer at Tech Mahindra**, where I built and deployed blockchain networks and smart contracts.
 - 🌱 I’m currently building end-to-end projects focusing on **Deep Learning, NLP, and Full-Stack Architecture**.
 - 💬 Ask me about **Python, C++, Django, React, or Machine Learning pipelines**.
-- 📫 Reach out to me at: **omatulsa@buffalo.edu**.
+- 📫 Reach out to me at: **omsalunke19@gmail.com**.
 - ⚡ **Fun fact:** When I'm not writing code or training models, you can find me at the movies, watching an F1 race or UFC card, or grinding ranked matches in VALORANT and running heists in GTA Online.
 
 ### 🛠️ Tech Stack
