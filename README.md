@@ -43,3 +43,10 @@
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![GCP](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+### 🎓 Certifications & Professional Profiles
+
+* **Google Cloud Skills Boost** – [Verified Cloud & AI Badges](https://www.skills.google/public_profiles/78244237-d447-4538-bc16-49d4128d31d1)
+* **Google Developer Profile** – [Developer Roadmap & Achievements](https://developers.google.com/profile/u/omsalunke)
+* **AWS Certified Solutions Architect – Associate**
+* **Microsoft Certified: Power BI Data Analyst Associate**
