@@ -1,19 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geist = Geist({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
-  title: "Om Salunke | AI & Data Engineer",
+  title: "Om Salunke - Creative Developer | AI Engineer",
   description:
     "Master of Science in Artificial Intelligence at University at Buffalo. Specializing in distributed systems, NLP pipelines, and cloud architecture.",
   keywords: [
@@ -27,23 +22,10 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Om Salunke" }],
-  openGraph: {
-    title: "Om Salunke | AI & Data Engineer",
-    description:
-      "Master of Science in Artificial Intelligence at University at Buffalo",
-    type: "website",
-    siteName: "Om Salunke Portfolio",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Om Salunke | AI & Data Engineer",
-    description:
-      "Master of Science in Artificial Intelligence at University at Buffalo",
-  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#0b080c",
   width: "device-width",
   initialScale: 1,
 };
@@ -54,12 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en">
+      <body className={`${geist.variable} font-sans`}>{children}</body>
     </html>
   );
 }
