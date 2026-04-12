@@ -1,101 +1,137 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Database, Code, Brain } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const skillCategories = [
   {
     title: "Data & Cloud",
-    icon: Database,
-    skills: ["Databricks", "AWS", "GCP", "Snowflake", "Delta Lake", "Apache Spark"],
+    skills: ["Databricks", "AWS", "GCP", "Snowflake", "Delta Lake", "Apache Spark", "Kafka"],
   },
   {
     title: "Languages",
-    icon: Code,
-    skills: ["Python", "SQL", "Java", "C++", "JavaScript", "TypeScript"],
+    skills: ["Python", "SQL", "Java", "C++", "JavaScript", "TypeScript", "Scala"],
   },
   {
     title: "AI/ML",
-    icon: Brain,
-    skills: ["PyTorch", "TensorFlow", "MLflow", "Scikit-learn", "LangChain", "Hugging Face"],
+    skills: ["PyTorch", "TensorFlow", "MLflow", "Scikit-learn", "LangChain", "Hugging Face", "OpenAI"],
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
 export function Skills() {
-  return (
-    <section className="px-6 py-24 md:py-32">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-16"
-        >
-          <p className="text-muted text-sm tracking-widest uppercase mb-3 font-mono">
-            Expertise
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-            Skills & Technologies
-          </h2>
-        </motion.div>
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      gsap.fromTo(
+        headerRef.current,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: "top 85%",
+          },
+        }
+      );
+
+      // Grid items animation
+      if (gridRef.current) {
+        const items = gridRef.current.querySelectorAll(".skill-category");
+        items.forEach((item, i) => {
+          gsap.fromTo(
+            item,
+            { y: 60, opacity: 0 },
+            {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: item,
+                start: "top 88%",
+              },
+              delay: i * 0.1,
+            }
+          );
+        });
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      id="about"
+      className="relative py-32 md:py-48 px-6"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <div ref={headerRef} className="mb-20">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-sm font-mono text-muted tracking-wider">
+              03
+            </span>
+            <span className="w-12 h-px bg-border" />
+            <span className="text-sm text-muted uppercase tracking-[0.2em]">
+              Skills
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight">
+            Technologies
+            <br />
+            <span className="text-muted">I work with</span>
+          </h2>
+        </div>
+
+        {/* Skills grid */}
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={itemVariants}
-              className="group p-6 rounded-2xl border border-border bg-card transition-all duration-300 hover:border-border-hover hover:bg-card-hover hover:shadow-[0_0_30px_rgba(161,161,170,0.05)]"
+              className="skill-category group"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-background border border-border">
-                  <category.icon className="w-5 h-5 text-muted" />
-                </div>
-                <h3 className="text-lg font-medium text-foreground">
+              <div className="relative p-8 border border-border/50 rounded-2xl bg-card/20 backdrop-blur-sm transition-all duration-500 hover:border-border hover:bg-card/40 h-full">
+                {/* Category number */}
+                <span className="absolute top-6 right-6 text-5xl font-light text-border/30 select-none">
+                  0{index + 1}
+                </span>
+
+                <h3 className="text-xl font-light text-foreground mb-8 tracking-tight">
                   {category.title}
                 </h3>
-              </div>
 
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-sm text-muted hover:text-foreground bg-background rounded-lg border border-border transition-colors duration-200"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skill}
+                      className="skill-tag px-4 py-2 text-sm text-muted border border-border/50 rounded-full transition-all duration-300 hover:border-foreground/30 hover:text-foreground hover:bg-foreground/5"
+                      style={{
+                        transitionDelay: `${skillIndex * 30}ms`,
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Hover line */}
+                <div className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-foreground/30 to-transparent transition-all duration-500 group-hover:w-full" />
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

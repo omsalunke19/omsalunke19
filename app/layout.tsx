@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     "Databricks",
     "AWS",
     "Python",
+    "Portfolio",
   ],
   authors: [{ name: "Om Salunke" }],
   openGraph: {
@@ -31,11 +32,18 @@ export const metadata: Metadata = {
     description:
       "Master of Science in Artificial Intelligence at University at Buffalo",
     type: "website",
+    siteName: "Om Salunke Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Om Salunke | AI & Data Engineer",
+    description:
+      "Master of Science in Artificial Intelligence at University at Buffalo",
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#09090b",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };
@@ -47,7 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+      >
         {children}
       </body>
     </html>
