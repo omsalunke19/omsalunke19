@@ -6,11 +6,10 @@
 </div>
 
 <p align="center">
-  <a href="https://omsalunke.space/" target="blank"><img align="center" src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=framer&logoColor=white" alt="Portfolio Website" height="30" /></a>
-  <a href="https://linkedin.com/in/om-salunke19" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="om-salunke19" height="30" /></a>
-  <a href="https://github.com/omsalunke19" target="blank"><img align="center" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="omsalunke19" height="30" /></a>
+  <a href="https://omsalunke.space/" target="_blank"><img align="center" src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=framer&logoColor=white" alt="Portfolio Website" height="30" /></a>
+  <a href="https://linkedin.com/in/om-salunke19" target="_blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="om-salunke19" height="30" /></a>
+  <a href="https://github.com/omsalunke19" target="_blank"><img align="center" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="omsalunke19" height="30" /></a>
 </p>
-
 ---
 
 ### 👨‍💻 About Me
