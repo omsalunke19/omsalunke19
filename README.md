@@ -14,7 +14,7 @@
 
 ### 👨‍💻 About Me
 
-- 🌐 Check out my latest projects and work on my **[Portfolio Website](https://omsalunke.framer.website/)**.
+- 🌐 Check out my latest projects and work on my **[Portfolio Website](https://omsalunke.space/)**.
 - 🔭 Graduated **Master's in Artificial Intelligence** at the **University at Buffalo**.
 - 💼 I previously interned as a **Software Engineer at Tech Mahindra**, where I built pipelines and implemented data governance .
 - 🌱 I’m currently building end-to-end projects focusing on **Deep Learning, NLP, and Full-Stack Architecture**.
